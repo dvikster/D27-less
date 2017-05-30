@@ -35,19 +35,18 @@ var  genPassStrong = {
     'url': '',
     'salt': '2;+/<-',
     'pass': function () {
-
-        var saltNew = genPass.salt;
-        for(var i=0; i<4; i++){
+        var saltNew = genPassStrong.salt;
+        // for(var i=0; i<4; i++){
             console.log(saltNew);
             var rand = 1 + Math.floor(Math.random() * (6 + 1 - 1));
             console.log(rand);
-            saltNew +=saltNew.charat(rand);
+            saltNew +=saltNew.charAt(rand);
             console.log(saltNew);
-        }
+        // }
 
-        genPass.before = $('#before').val();
-        genPass.after = $('#after').val();
-        genPass.url = $('#url').val();
+        genPassStrong.before = $('#before').val();
+        genPassStrong.after = $('#after').val();
+        genPassStrong.url = $('#url').val();
         var newUrl = genPass.url;
         newUrl = newUrl.replace(/http:\/\//g,'');
         newUrl = newUrl.replace(/https:\/\//g,'');
@@ -59,10 +58,10 @@ var  genPassStrong = {
         newUrl = newUrl.replace(/ /gi, '');
         var dotPos = newUrl.search(/\./);
         newUrl = newUrl.substr(0,dotPos);
-        var newPass = genPass.before+newUrl+genPass.after;
+        var newPass = genPassStrong.before+newUrl+genPassStrong.after;
         $('.new_pass').html(newPass);
     }};
-genPass.pass();
+genPassStrong.pass();
 
 // function getDataStrong() {
 //     before = $('#before').val();
