@@ -1,7 +1,17 @@
 /* Colors for my Website */
 body {
-  margin: 0;
+  margin: 50px;
   padding: 0;
   background: #e2e2e2;
   color: #454545;
+}
+.error {
+  display: none;
+  color: red;
+}
+.visible {
+  display: block;
+}
+#url.empty {
+  border: 1px solid red;
 }
