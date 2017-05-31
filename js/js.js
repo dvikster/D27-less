@@ -47,7 +47,7 @@ var  genPass = {
             var dotPos = newUrl.search(/\./);
             if(dotPos>0){newUrl = newUrl.substr(0,dotPos);}
             var newPass = genPass.before + newUrl + genPass.after;
-            $('.new_pass').html(newPass);
+            $('.new_pass_wrapp').html('<div class="new_pass">'+newPass+'</div>');
         }
         else{
             $('#url').addClass('empty');
@@ -97,7 +97,7 @@ var  genPassStrong = {
             newUrl = newUrl.replace(newUrl[5], saltNew.charAt(1));
             newUrl = newUrl.replace(newUrl[7], saltNew.charAt(2));
             var newPassStrong = genPassStrong.before+newUrl+saltNew1;
-            $('.new_pass').html(newPassStrong);
+            $('.new_pass_wrapp').html('<div class="new_pass">'+newPassStrong+'</div>');
         }
         else{
             $('#url').addClass('empty');

@@ -15,7 +15,7 @@ h1 {
   margin: 0;
   text-align: center;
   width: 100%;
-  background: #7bb7fa;
+  background: #5680af;
   color: white;
   height: 100px;
   line-height: 100px;
@@ -38,16 +38,20 @@ ul li {
 ul a {
   text-decoration: none;
   color: #5680af;
-  font-weight: 400;
+  font-weight: 300;
   font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
   font-size: 24px;
 }
 ul a.active {
   color: #5680af;
-  font-weight: bold;
+  font-weight: 400;
+}
+.pass-wrap {
+  position: relative;
 }
 h2 {
-  margin: 10px 0;
+  margin: 10px 0 0;
   color: #5680af;
   font-weight: 400;
   text-align: left;
@@ -60,17 +64,19 @@ input {
   width: 100%;
   padding: 10px;
   color: #5680af;
+  margin: 30px 0 0 0;
 }
 button {
-  background: #7bb7fa;
+  background: #5680af;
   color: white;
   width: 100%;
   text-align: center;
   border: none;
   height: 40px;
-  font-family: 'Voltaire', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 26px;
   margin: 20px 0;
+  outline: none;
 }
 .new_pass {
   border: 1px solid #5680af;
@@ -85,11 +91,13 @@ button {
 }
 .error {
   display: none;
-  color: red;
+  color: #ff4b65;
+  position: absolute;
+  top: 20px;
 }
 .visible {
   display: block;
 }
 #url.empty {
-  border: 1px solid red;
+  border: 1px solid #ff4b65;
 }
