@@ -6,36 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>gulp-less</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700|Roboto+Condensed:300,400,700|Satisfy|Voltaire" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
   </head>
 
   <body>
 
     <div id="wrapper">
-        <h1>Генератор паролей</h1>
-      <!--<p>Введите before</p>-->
-      <!--<input type="text" id="before">-->
-      <p>Введите url</p>
-      <input type="text" id="url">
-        <p class="error">Поле должно быть заполненно</p>
-      <!--<p>Введите after</p>-->
-      <!--<input type="text" id="after">-->
-      <p><button id="gen_pass">Сгенерировать проль</button> <button id="gen_pass_strong">Сгенерировать strong проль</button></p>
-      <div class="new_pass"></div>
+        <h1>password generator</h1>
+        <div class="container">
+          <ul>
+            <li><a href="#" id="lite">Lite</a></li>
+            <li><a href="#" id="strong">Strong</a></li>
+          </ul>
+          <div class="pass-wrap"></div>
+        </div>
+
     </div>
 
-    <!--<div class="tabs">-->
-        <!--<div class="tabs-header">-->
-            <!--<div class="tab-h" data-tab="1">Tab 1</div>-->
-            <!--<div class="tab-h" data-tab="2">Tab 2</div>-->
-            <!--<div class="tab-h" data-tab="3">Tab 3</div>-->
-        <!--</div>-->
-        <!--<div class="tabs-body">-->
-            <!--<div class="tab-b" data-tab="1">Содержимое первой вкладки</div>-->
-            <!--<div class="tab-b" data-tab="2">Содержимое второй вкладки</div>-->
-            <!--<div class="tab-b" data-tab="3">Содержимое третьей вкладки</div>-->
-        <!--</div>-->
-    <!--</div>-->
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/js.js"></script>

@@ -1,22 +1,105 @@
 /* Colors for my Website */
-@color-orange: #ff9900;
-@color-gray_light: #cccccc;
-@color-black_dark: #e2e2e2;
-@color-black_medium: #454545;
-
+@color-error: red;
+@color-blue-light: #7bb7fa;
+@color-header: white;
+@width: 320px;
+@color-blue-dark:#5680af;
+*{
+    box-sizing: border-box;
+}
 body {
-    margin: 50px;
+    margin: 0;
     padding: 0;
-    background: @color-black_dark;
-    color: @color-black_medium;
+
+}
+.container{
+    width: @width;
+    margin: auto;
+    padding: 10px;
+}
+h1{
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    background: @color-blue-light;
+    color:@color-header;
+    height: 100px;
+    line-height: 100px;
+    font-family: 'Voltaire', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 42px;
+}
+ul{
+    margin: 30px 0;
+    padding: 0;
+    li{
+        list-style: none;
+        display: inline-block;
+        width:145px;
+        text-align: center;
+    }
+    a{
+        text-decoration: none;
+        color: @color-blue-dark;
+        font-weight: 400;
+        font-family: 'Roboto Condensed', sans-serif;
+        //text-transform: uppercase;
+        font-size: 24px;
+
+    &.active{
+        color: @color-blue-dark;
+        font-weight: bold;
+    }
+ }
+}
+h2{
+    margin:10px 0;
+    color: @color-blue-dark;
+    font-weight: 400;
+    text-align: left;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+input{
+    border: 1px solid @color-blue-dark;
+    outline: none;
+    height:30px;
+    width:100%;
+    padding:10px;
+    color: @color-blue-dark;
+}
+button{
+    background: @color-blue-light;
+    color:@color-header;
+    width: 100%;
+    text-align: center;
+    border: none;
+    height: 40px;
+    font-family: 'Voltaire', sans-serif;
+    font-size: 26px;
+    margin:20px 0;
+}
+.new_pass {
+    border: 1px solid @color-blue-dark;
+    height:50px;
+    line-height: 50px;
+    font-size: 18px;
+    width:100%;
+    text-align: center;
+    color: @color-blue-dark;
+    font-weight: 400;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .error{
   display: none;
-  color: red;
+  color: @color-error;
 }
 .visible{
   display: block;
 }
 #url.empty{
-  border: 1px solid red;
+  border: 1px solid @color-error;
 }
+
+

@@ -1,7 +1,27 @@
 $(document).ready(function () {
-    $('#gen_pass').on('click', genPass.pass);
-    $('#gen_pass_strong').on('click', genPassStrong.pass);
+    $('#lite').addClass('active');
+    $('.pass-wrap').load('modules/lite.html', function () {
+        $('#gen_pass').on('click', genPass.pass);
+    });
+    $('#strong').on('click', function () {
+        $('ul li a').removeClass('active');
+        $('.pass-wrap').load('modules/strong.html', function () {
+            $('#gen_pass_strong').on('click', genPassStrong.pass);
+        });
+        $('#strong').addClass('active');
+
+    });
+    $('#lite').on('click', function () {
+        $('ul li a').removeClass('active');
+        $('.pass-wrap').load('modules/lite.html', function () {
+            $('#gen_pass').on('click', genPass.pass);
+        });
+        $('#lite').addClass('active');
+    });
+
+    // $('#gen_pass_strong').on('click', genPassStrong.pass);
 });
+
 var before, after, url;
 
 var  genPass = {
@@ -41,7 +61,7 @@ var  genPassStrong = {
     'before': '738,',
     // 'after': '',
     'url': '',
-    'salt': '2;b+/d<-fa1',
+    'salt': '2;b+/d>-fa1',
     'pass': function () {
         $('#url').removeClass('empty');
         $('.error').removeClass('visible');
