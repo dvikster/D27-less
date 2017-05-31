@@ -52,6 +52,7 @@ var  genPass = {
         else{
             $('#url').addClass('empty');
             $('.error').addClass('visible');
+            $('.new_pass_wrapp').html('');
         }
     }};
     //genPass.pass();
@@ -102,6 +103,7 @@ var  genPassStrong = {
         else{
             $('#url').addClass('empty');
             $('.error').addClass('visible');
+            $('.new_pass_wrapp').html('');
         }
     }};
 //genPassStrong.pass();
